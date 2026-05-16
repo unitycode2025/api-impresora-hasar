@@ -209,6 +209,9 @@ Imprime líneas de texto libre.
 
 Para que la API arranque automáticamente con Windows y quede corriendo siempre:
 
+# Como correr estas lineas?
+Ejecutar siempre el CMD o PowerShell como administrador para poder instaslar PM2, crear y correr el servicio. Para ello debemos ir hasta el directorio del proyecto
+
 ```bash
 # Instalar PM2 globalmente
 npm install -g pm2
@@ -252,3 +255,10 @@ pm2 stop api-impresora
 ### El QR no se imprime
 - Asegurate de tener instalado `npm install qrcode`
 - La librería `node-thermal-printer` necesita que la imagen sea un Buffer PNG válido
+
+- ### No permiter ejecutar como admnistrador ciertas lineas de comandos
+- Asegurate de tener desinstalado o deshabilitado en antivirus (Mcafee)
+
+- ### Habilitar la ejecucion de scripts cuando se trata de un sistema operativo nuevo
+- Asegurate de tener habilitado la ejecucion de script,  en consola PowerSheel como admnistrador
+  Set-ExecutionPolicy Unrestricted
